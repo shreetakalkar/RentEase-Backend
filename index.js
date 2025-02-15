@@ -5,30 +5,19 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const authRoutes = require("./routes/authRoutes");
-<<<<<<< HEAD
 const bookingRoutes = require("./routes/bookingRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
 const reviewRoutes = require("./routes/reviewRoutes");
 const roomRoutes = require("./routes/roomRoutes");
 const userRoutes = require("./routes/userRoutes");
-=======
-const cors = require("cors");
->>>>>>> 16850fb94eeacdc1f9f5eff90a88e0a4f526c17a
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(express.json());
-<<<<<<< HEAD
 
 app.use(
   cors({
-=======
-app.use(
-  cors({
-    // origin: "http://localhost:5173",
-    // origin: "https://mastercode.netlify.app",
->>>>>>> 16850fb94eeacdc1f9f5eff90a88e0a4f526c17a
     origin: "*",
     methods: ["POST", "GET"],
     credentials: true,

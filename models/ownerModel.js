@@ -2,18 +2,8 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 const ownerSchema = new mongoose.Schema({
-  hotelName: {
-    type: String,
-    required: [true, 'Hotel name is required'],
-    trim: true,
-  },
-  address: {
-    type: String,
-    required: [true, 'Address is required'],
-  },
-  mobileNo: {
-    type: String,
-    required: [true, 'Mobile number is required'],
+  owner_id: {
+    type: Number,
     unique: true,
   },
   name: {
@@ -30,6 +20,24 @@ const ownerSchema = new mongoose.Schema({
   password: {
     type: String,
     required: [true, 'Password is required'],
+  },
+  mobile_no: {
+    type: String,
+    required: [true, 'Mobile number is required'],
+    unique: true,
+  },
+  hotel_name: {
+    type: String,
+    required: [true, 'Hotel name is required'],
+    trim: true,
+  },
+  address: {
+    type: String,
+    required: [true, 'Address is required'],
+  },
+  created_at: {
+    type: Date,
+    default: Date.now,
   },
 });
 

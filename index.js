@@ -27,7 +27,7 @@ app.use(
 
 mongoose.set('strictQuery', true);
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect("mongodb://localhost:27017/rentease")
   .then(() => console.log("MongoDB connected successfully!"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
